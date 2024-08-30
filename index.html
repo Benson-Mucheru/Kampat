@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="./app.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="Icon" href="img/Logo.png" />
+    <title>Kampat</title>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="header">
+      <!-- Image Logo -->
+      <a href="#"><img src="img/Logo.png" alt="Logo image" width="90px" /></a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-bar">
+        <ul class="links">
+          <li><a href="#about-section" onclick="closeNav()">About</a></li>
+          <li><a href="#service-section" onclick="closeNav()">Services</a></li>
+          <li><a href="#project-section" onclick="closeNav()">Projects</a></li>
+          <li>
+            <a href="tel:+254796001799" id="contact-link" onclick="closeNav()"
+              >Call Now</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Menu Icon -->
+      <button type="button" class="humberger-icon">
+        <i class="fa-solid nav-bar-humberger-icon fa-bars"></i>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-section">
+          <!-- Main Heading -->
+          <h1 class="hero-section-main-heading">Kampat</h1>
+          <!-- Sub Heading -->
+          <h2 class="hero-section-sub-heading">
+            Roofing <span class="and">&</span> Ceiling
+          </h2>
+          <!-- Text Area -->
+          <p class="hero-section-text">
+            Welcome to KAMPAT where we don't just build roofs; we create
+            shelters. We don't just install ceilings; we craft atmospheres. Your
+            space deserves more than just protection – it deserves distinction.
+            Step into a world where innovation meets reliability, where
+            craftsmanship is an art, and where every roof and ceiling is a
+            testament to our commitment to excellence.
+          </p>
+
+          <a href="#contact-section" id="contact-btn">
+            <button type="button" id="hero-section-call-to-action">
+              Message Us
+            </button>
+          </a>
+
+          <!-- Social Links -->
+        </div>
+
+        <!-- Banner Image -->
+        <div class="hero-section-banner">
+          <img src="img/Banner.webp" width="600px" alt="banner image" />
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about-section">
+        <h2 class="about-heading">About Us</h2>
+        <div class="about-container">
+          <div class="about-img">
+            <img
+              src="img/IMG-20240107-WA0003.jpg"
+              width="450px"
+              height="450px"
+              alt="About Image"
+            />
+          </div>
+
+          <div class="about-info">
+            <h2 class="about-info-heading">
+              Welcome to KAMPAT – Your Roofing and Ceiling Solutions!
+            </h2>
+
+            <p class="about-info-text">
+              At KAMPAT, we take pride in being your trusted partner for all
+              your roofing and ceiling needs. With a commitment to excellence
+              and a passion for delivering top-notch services, we have become a
+              leading name in the industry. Our journey is rooted in a deep
+              understanding of the importance of quality roofing and ceilings in
+              creating functional and aesthetically pleasing spaces.
+            </p>
+
+            <h3 class="about-info-mission">Our Mission</h3>
+            <p class="about-info-mission-text">
+              Our mission is to elevate your living and working spaces by
+              providing superior roofing and ceiling solutions. We strive to
+              blend innovation with reliability, ensuring that every project we
+              undertake stands the test of time. Whether you are looking for a
+              durable roof that withstands the elements or a stylish ceiling
+              that enhances the ambiance of your interiors, we have the
+              expertise to bring your vision to life.
+            </p>
+
+            <h3 class="about-info-question">Why Choose KAMPAT?</h3>
+            <ul class="about-info-list">
+              <li class="about-info-value">
+                Expertise: Our team of skilled professionals brings years of
+                expertise to every project. From traditional roofing solutions
+                to cutting-edge ceiling designs, we have the knowledge and
+                skills to meet diverse needs.
+              </li>
+              <li class="about-info-value">
+                Quality Materials: We understand that the foundation of a
+                reliable roof or ceiling lies in the quality of materials used.
+                That's why we source only the finest materials, ensuring
+                longevity and performance.
+              </li>
+              <li class="about-info-value">
+                Innovation: Keeping pace with industry trends, we offer
+                innovative roofing and ceiling solutions that not only meet but
+                exceed your expectations. Our commitment to staying ahead of the
+                curve ensures that your project benefits from the latest
+                advancements.
+              </li>
+              <li class="about-info-value">
+                Innovation: Keeping pace with industry trends, we offer
+                innovative roofing and ceiling solutions that not only meet but
+                exceed your expectations. Our commitment to staying ahead of the
+                curve ensures that your project benefits from the latest
+                advancements.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="service-section">
+        <h2 class="service-heading">Our Services</h2>
+        <!-- Services Cards -->
+        <div class="service-container">
+          <div class="service-card">
+            <img src="img/7790128-removebg-preview.png" width="260px" alt="" />
+            <h3 class="service-title">Roof Installation</h3>
+            <p class="service-info">
+              Our skilled team specializes in the professional installation and
+              replacement of roofs. From traditional shingles to modern roofing
+              materials, we ensure that your roof not only provides robust
+              protection but also enhances the overall aesthetic of your
+              property.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="img/false-ceiling-installation-isolated-concept-vector-illustration_107173-23745-removebg-preview.png"
+              width="260px"
+              alt=""
+            />
+            <h3 class="service-title">Ceiling</h3>
+            <p class="service-info">
+              Elevate your interiors with our custom ceiling designs. Whether
+              you prefer a classic look or a contemporary feel, we work closely
+              with you to create ceilings that complement your style. Our
+              installations are not just functional; they are statements that
+              define your space.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="img/8671491-removebg-preview (3).png"
+              width="260px"
+              alt=""
+            />
+            <h3 class="service-title">Repair</h3>
+            <p class="service-info">
+              Timely maintenance is key to the longevity of your roof. Our
+              experts conduct thorough inspections, identifying potential issues
+              and offering efficient repair solutions. Trust us to keep your
+              roof in optimal condition, protecting your investment for years to
+              come.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="project-section">
+        <h2 class="project-heading">Recent Projects</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <img
+              src="img/IMG-20231231-WA0001.jpg"
+              width="240px"
+              height="240px"
+              alt=""
+            />
+            <h3 class="project-title">Customized Luxury in Every Detail</h3>
+            <p class="project-info">
+              Step into the realm of customized luxury with KAMPAT's bespoke
+              ceiling design and installation. Explore how our team collaborated
+              with clients to create unique, eye-catching ceilings that became
+              the focal point of interior spaces, reflecting personal style and
+              taste.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="img/IMG-20231231-WA0002.jpg"
+              width="240px"
+              height="240px"
+              alt=""
+            />
+            <h3 class="project-title">Open Concept Innovation</h3>
+            <p class="project-info">
+              Witness the transformation of an ordinary space into a masterpiece
+              of open-concept design. KAMPAT's ceiling installation not only
+              opened up the room but also introduced innovative designs that
+              enhance the flow of natural light and redefine the spatial
+              dynamics.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img src="img/IMG-20231231-WA0003.jpg" width="280px" alt="" />
+            <h3 class="project-title">Modern Elegance in Suburban Living</h3>
+            <p class="project-info">
+              Discover how KAMPAT brought modern elegance to a suburban home
+              with a sleek and durable roofing solution. Our team carefully
+              selected materials to enhance both aesthetics and functionality,
+              ensuring the roof complements the architectural style while
+              providing reliable protection.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="img/IMG-20240107-WA0005.jpg"
+              width="240px"
+              height="240px"
+              alt=""
+            />
+            <h3 class="project-title">Modern Elegance Retreat</h3>
+            <p class="project-info">
+              Discover the art of modern living with our integration of
+              contemporary roofing materials, innovative ceiling designs, and
+              bespoke wall treatments. This project exemplifies how KAMPAT can
+              transform residential spaces into modern retreats that seamlessly
+              blend functionality and style.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact-section">
+        <h2 class="contact-heading">Get in touch</h2>
+
+        <form action="http://httpbin.org/post" method="post">
+          <div class="contact-input-field">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              required
+              class="item"
+            />
+          </div>
+
+          <div class="contact-input-field">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              class="item"
+            />
+          </div>
+
+          <div class="contact-input-field">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              placeholder="Phone Number"
+              required
+              class="item"
+            />
+          </div>
+
+          <div class="contact-input-field">
+            <input
+              type="text"
+              name="issue"
+              id="issue"
+              placeholder="issue"
+              required
+              class="item"
+            />
+          </div>
+
+          <div class="textarea">
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              required
+              class="item"
+            ></textarea>
+          </div>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LcSSUEpAAAAANZPr0fA3OROzXb-ZWh61Aab8WRK"
+          ></div>
+          <button type="submit" id="submit-btn">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+  <div class="social-section">
+    <div class="social-section-container">
+      <ul class="social-section-list">
+        <li class="social-section-link">
+          <a
+            href="https://web.facebook.com/profile.php?id=100053830562011"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li class="social-section-link">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="social-section-link">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+    <p class="copyright">&copy; 2024 KamPat</p>
+  </div>
+</html>
